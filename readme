@@ -1,0 +1,57 @@
+/********************************************************************
+ * Author Name:     WangKun
+ * Author ID:       DG1333031
+ * Mail Address:    nju.wangkun@gmail.com
+ * Last Modified:   2014-07-04 20:13
+ * Filename:        readme
+ * Description:		This file is used to record ideas.
+ ********************************************************************/
+UML Used:
+--- What is UML, Why I need it?
+
+Design Pattern Used:
+--- How many kinds of desgin patterns? Among them, which can be applied?
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~ Data Structures
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
++++ How to store tape?
+------ An array that can be arbitrary large
+					-------------------------------------------------
+		cell index	|	0	|	1	|	2	|	3	|	4	|	...	|
+					-------------------------------------------------
+		cell value	|	1	|	0	|	0	|	1	|	1	|	...	|
+					-------------------------------------------------
+	Data structure of tape:
+	+	ArrayList<Integer> tape = new ArrayList<Integer>();
+	The array is initialized to 0. head position 'headPosition' points to current cell
+	being watched. Current symbol being watched can be fetch by headPosition:
+	+	currSymbol = tape.get(headPosition)
++++ How to store states?
+------ Look for a 2D table
+			-------------------------------------------------
+			|		|		0			|		1			|
+			-------------------------------------------------
+			|	0	|					|					|
+			|	1	|		1L2			|		1R1			|
+			|	2	|		0R3			|		1L2			|
+			|	3	|		STOP		|		0R4			|
+			|	4	|		STOP		|		0R5			|
+			|  ...	|		...			|		...			|
+			-------------------------------------------------
+	Involved Symbols: 
+	+ cell symbols:			0, 1
+	+ state symbols:		Positive Integer
+	+ direction symbols:	L(left), R(right), S(stay)
+	+ Predefined Const:		STOP(undefined trasition rule, the machine will terminate)
+	String of 2D table (N*2, N is number of states, 2 is number of cell symbols): 
+	+ String rules = new String[N][2]			(N can be fetched from the program description)
+		* Perhaps we can use HashMap, it is faster.
+	+ Current state 'currState', current symbol 'currSymbol', head position 'headPosition';
+	+ From headPosition, we can get currSymbol, by looking at the tape;
+	+ Transition rule: currRule = rules[currState][currSymbol];
+	+ Update current state, and head position:
+		* currState = state(currRule), update current state
+		* action(currRule), update current symbol pointed by head
+		* move(currRule), update head position
+

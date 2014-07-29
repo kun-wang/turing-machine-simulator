@@ -1,0 +1,8 @@
+# all swap files, tempoary files will be ignored
+*.swp
+*~
+*.swo
+# All files in 'reference' directory will be ignored
+references/
+# All files in 'bin' directory will be ignored
+bin/
