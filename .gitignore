@@ -3,10 +3,8 @@
 *~
 *.swo
 # All files in 'reference' directory will be ignored
-references/
+references/*
 # All files in 'analysis' directory will be ignored
-analysis/
+analysis/*
 # All files in 'uml' directory will be ignored
-uml/
-# All files in 'runnable' directory will be ignored
-runnable/
+uml/*

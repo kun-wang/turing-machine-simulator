@@ -1,0 +1,35 @@
+# No comments are allowed between the tags. There are following tags:
+# 1) title, title end
+# --- This tag specifies machine's name.
+# 2) description, description end
+# --- This tag specifies machine's description.
+# 3) rules, rules end
+# --- This tag specifies machine's transition rules.
+# 4) inputs, inputs end
+# --- This tag specifies machine's predefined inputs.
+
+title
+    Copy String
+title end
+
+description
+    Given a string of 1s, copy them in the end with an separation of 0.
+description end
+
+# If no rule for a given pair (state, symbol), use indicator 'XXX' instead.
+# Please do not leave it empty. 
+rules
+         0       1      
+1       0L6     0R2     
+2       0R3     1R2     
+3       1L4     1R3     
+4       0L5     1L4     
+5       1R1     1L5     
+6       0R7     1L6     
+rules end
+
+inputs
+011000000
+0111111111000000
+011111110000
+inputs end 
