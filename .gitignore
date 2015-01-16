@@ -8,3 +8,5 @@ references/*
 analysis/*
 # All files in 'uml' directory will be ignored
 uml/*
+# All files in 'runnable' directory will be ignored
+runnable/*
