@@ -55,7 +55,7 @@ import util.MethodFactory;
 public class MainGUI extends JFrame
 {
     /* ==========================================================================================
-     * Constans definition begins
+     * Constants definition begins
      * ========================================================================================== */
     private static final long    serialVersionUID  = 1L;
     private static final boolean RUNNING_STATE     = false;

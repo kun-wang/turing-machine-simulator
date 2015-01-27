@@ -28,7 +28,7 @@ public class GuideArea extends TitledPanel
         builder.append("Step1. Load pre or self defined machine from menu \"Load Machine...\"<br>");
         builder.append("Step2. Set input in the \"input Selector\". "
                 + "You can select the predefined input or input your preferred input.<br>");
-        builder.append("Step3. Press \"Run Button\" to run the machine.");
+        builder.append("Step3. Press \"Run Button\" to run the machine.<br>");
         builder.append("Step4. Slide \"Speed Slider\" to adjust the speed of machine.");
         builder.append("<body></html>");
         
