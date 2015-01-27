@@ -2,11 +2,8 @@
 *.swp
 *~
 *.swo
-# All files in 'reference' directory will be ignored
-references/*
-# All files in 'analysis' directory will be ignored
-analysis/*
-# All files in 'uml' directory will be ignored
-uml/*
-# All files in 'runnable' directory will be ignored
-runnable/*
+# All files except images in 'bin' directory will be ignored
+bin/main/*
+bin/turing/*
+bin/ui/*
+bin/util/*
