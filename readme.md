@@ -1,5 +1,5 @@
 # Readme of Turing machine simulator
-> Copyright 2013, Kun Wang (nju.wangkun@gmail.com).
+> Copyright 2014, Kun Wang (nju.wangkun@gmail.com).
 
 > Department of Computer Science & Technology, Nanjing University, China.
 
@@ -12,22 +12,39 @@ The syntax of Turing machine is totally from the book of
 
 ## Description
 
-`bin`
-> Contains the compiled .class files. The "images" sub-directory is very important as it stores the required images for the simulator. In the next update, I will try to move it out of the "bin" directory.
+`bin`  
+Contains the compiled .class files. The "images" sub-directory is very important as it stores the required images for the simulator. In the next update, I will try to move it out of the "bin" directory.
 
-`files`
-> Contains the program description for specific operations. > Examples include:
-> + **Adder.tur**: a program for adding two non-negative integers.
-> + **copyString.tur**: a program for copy a string of *11...11*s.
->
-> In these two files, I have give a detail description of the requirements for writing a program that can be accepted by the simulator.
+`files`  
+Contains the program description for specific operations. Examples include:
 
-`src`
-> Source files of the simulator.
++ **Adder.tur**: a program for adding two non-negative integers.
++ **copyString.tur**: a program for copy a string of *11...11*s.
 
-**Attention!** All of the above three directories are required for running the simulator.
+In these two files, I gave a detail description of the requirements for writing a program that can be accepted by the simulator.
+
+`src`  
+Source files of the simulator.
+
+*All of the above three directories are required for running the simulator.*
+
+`introduction.pptx`  
+Actually, the Turing machine simuator is a project for the third assignment of the course **Software Architecture**. `introduction.pptx` is my presentation on the course, which introduces basic ideas of the project, and the design patterns that have been applied.
+
+`TMSimulator.7z`  
+The packed runnable jar, with necessary config files.
+
+
 ## How to Use
 
-*Step1.* Download the repository.
-*Step2.* Import into eclipse.
-*Step3.* Run it!
+There are two different ways to setup the simulator.
+### Method 1: Running the jar file
+*Step1.* Download the repository.  
+*Step2.* Unpack `TMSimulator.7z`.  
+*Step3.* Click the `run.bat` batch file.  
+**Warnning!** The `files` and `TMSimulator.jar` must be in the same directory with `run.bat`. 
+
+### Method 2: Importing the project into eclipse
+*Step1.* Download the repository.  
+*Step2.* Import into eclipse.  
+*Step3.* Run it!  

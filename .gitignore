@@ -3,7 +3,7 @@
 *~
 *.swo
 # All files except images in 'bin' directory will be ignored
-/bin/main/*
-/bin/turing/*
-/bin/ui/*
-/bin/util/*
+# /bin/main/*
+# /bin/turing/*
+# /bin/ui/*
+# /bin/util/*
