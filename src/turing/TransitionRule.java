@@ -6,7 +6,6 @@ import turing.tape.Tape;
 public class TransitionRule
 {
     public static final String UNDEFINED_RULE  = "XXX";
-    public static final int    LENGTH_OF_RULE   = 3;
     public static final int    NEW_SYMBOL_INDEX = 0;
     public static final int    DIRECTION_INDEX  = 1;
     public static final int    NEW_STATE_INDEX  = 2;
@@ -21,11 +20,6 @@ public class TransitionRule
     
     public TransitionRule(String rule)
     {
-        if (LENGTH_OF_RULE != rule.length())
-        {
-            System.err.println("getNewSymbol(): error length of transition rule!");
-            System.exit(-1);
-        }
         this.newSymbol = Integer.parseInt(rule.substring(NEW_SYMBOL_INDEX, NEW_SYMBOL_INDEX + 1));
         
         String dirString = rule.substring(DIRECTION_INDEX, DIRECTION_INDEX + 1);
@@ -40,7 +34,9 @@ public class TransitionRule
             System.err.println("TransitionRule(): error direction flag!");
             System.exit(-1);
         }
-        this.newState = Integer.parseInt(rule.substring(NEW_STATE_INDEX, NEW_STATE_INDEX + 1));
+        
+        // The remaining string is the new state number
+        this.newState = Integer.parseInt(rule.substring(NEW_STATE_INDEX, rule.length()));
 
     }
     
@@ -85,7 +81,7 @@ public class TransitionRule
                 rule.append(Tape.STAY_DIRECTION_FLAG);
                 break;
         }
-        rule.append(newState);
+        rule.append(Integer.toString(newState));
         return rule.toString();
     }
     

@@ -1,0 +1,40 @@
+# There are following tags:
+# 1) title, title end
+# --- This tag specifies machine's name.
+# 2) description, description end
+# --- This tag specifies machine's description.
+# 3) rules, rules end
+# --- This tag specifies machine's transition rules.
+# 4) inputs, inputs end
+# --- This tag specifies machine's predefined inputs.
+# !!! No comments are allowed between the tags.
+# !!! No empty lines are allowed between the tags.
+# There are three direction options:
+# + L --- moving left 
+# + C --- staying
+# + R --- moving right
+
+title
+    x adds y
+title end
+
+description
+    Given two integers x and y, calculate f(x,y)=x+y.
+description end
+
+# If no rule for a given pair (state, symbol), use indicator 'XXX' instead.
+# Please do not leave it empty. 
+rules
+         0       1      
+1       1R2     1R1     
+2       0L3     1R2     
+3       XXX     0L4     
+4       XXX     0L5     
+5       0R6     1L5     
+rules end
+
+inputs
+0110111000
+011010000
+011101111110000
+inputs end 

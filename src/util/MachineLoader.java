@@ -146,8 +146,10 @@ public class MachineLoader
             }
             // get state
             state = Integer.parseInt(stok.nextToken());
+            System.out.println("State is " + state);
             // get rule on symbol 0, symbol 1
             ruleOnSymbol0 = stok.nextToken();
+            
             key = new StateSymbolPair(state, Tape.FILL_SYMBOL);
             if (TransitionRule.isValidRule(ruleOnSymbol0))
                 rules.put(key, new TransitionRule(ruleOnSymbol0));

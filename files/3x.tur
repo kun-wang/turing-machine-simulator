@@ -1,4 +1,4 @@
-# No comments are allowed between the tags. There are following tags:
+# There are following tags:
 # 1) title, title end
 # --- This tag specifies machine's name.
 # 2) description, description end
@@ -7,29 +7,38 @@
 # --- This tag specifies machine's transition rules.
 # 4) inputs, inputs end
 # --- This tag specifies machine's predefined inputs.
+# !!! No comments are allowed between the tags.
+# !!! No empty lines are allowed between the tags.
+# There are three direction options:
+# + L --- moving left 
+# + C --- staying
+# + R --- moving right
 
 title
-    Copy String
+    3x
 title end
 
 description
-    Given a string of 1s, copy them in the end with an separation of 0.
+    Given an integer x, calculate f(x)=3x.
 description end
 
 # If no rule for a given pair (state, symbol), use indicator 'XXX' instead.
 # Please do not leave it empty. 
 rules
-         0       1      
-1       0L6     0R2     
-2       0R3     1R2     
-3       1L4     1R3     
-4       0L5     1L4     
-5       1R1     1L5     
-6       0R7     1L6     
+         0       1
+1       XXX  	0R2
+2       1L8     0R3
+3       0R4     1R3
+4       1R5     1R4
+5       1L6     XXX
+6		0L7		1L6
+7		1R2		1L7
+8		0R9		1L8
 rules end
 
 inputs
+010000000
 011000000
-0111111111000000
-011111110000
+011100000
+011111100
 inputs end 
