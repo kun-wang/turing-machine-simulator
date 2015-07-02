@@ -1,0 +1,64 @@
+# There are following tags:
+# 1) title, title end
+# --- This tag specifies machine's name.
+# 2) description, description end
+# --- This tag specifies machine's description.
+# 3) rules, rules end
+# --- This tag specifies machine's transition rules.
+# 4) inputs, inputs end
+# --- This tag specifies machine's predefined inputs.
+# !!! No comments are allowed between the tags.
+# !!! No empty lines are allowed between the tags.
+# There are three direction options:
+# + L --- moving left 
+# + C --- staying
+# + R --- moving right
+
+title
+    sqar-x
+title end
+
+description
+    Given an integer x, calculate f(x)=sqar(x).
+description end
+
+# If no rule for a given pair (state, symbol), use indicator 'XXX' instead.
+# Please do not leave it empty. 
+rules
+         0       1
+1		XXX		0R2
+2       1C28  	0R3
+3       0R12    1R4
+4       0R5     1R4
+5       1R6     1R20
+6       0R7     XXX
+7		1R8		1R7
+8		1L9		XXX
+9		0L10	1L9
+10		0L11	1L10
+11		0R2		1L11
+12		1R24	1R13
+13		0R14	1R13
+14		0L15	0R16
+15		1R25	XXX
+16		0R17	0R16
+17		0L18	0R17
+18		0L19	0L18
+19		0R26	1L19
+20		0R21	1R20
+21		0L5		1R22
+22		1L23	1R22
+23		XXX		0L9
+24		0L26	XXX
+25		0R25	0R16
+26		0L26	1L27
+27		1C28	1L27
+rules end
+
+inputs
+010000000
+011000000
+011100000
+011111100
+0111111111110
+inputs end 
