@@ -1,0 +1,43 @@
+# There are following tags:
+# 1) title, title end
+# --- This tag specifies machine's name.
+# 2) description, description end
+# --- This tag specifies machine's description.
+# 3) rules, rules end
+# --- This tag specifies machine's transition rules.
+# 4) inputs, inputs end
+# --- This tag specifies machine's predefined inputs.
+# !!! No comments are allowed between the tags.
+# !!! No empty lines are allowed between the tags.
+# There are three direction options:
+# + L --- moving left 
+# + C --- staying
+# + R --- moving right
+
+title
+    2x - wrong version
+title end
+
+description
+    Given an integer x, calculate f(x)=2x. This is a incorrect design of Turing machine. Pay attention to the number of 1's for encoding x.
+description end
+
+# If no rule for a given pair (state, symbol), use indicator 'XXX' instead.
+# Please do not leave it empty. 
+rules
+         0       1
+1       0R7  	0R2
+2       0R3     1R2
+3       1R4     1R3
+4       1L5     XXX
+5       0L6     1L5
+6		0R1		1L6
+rules end
+
+inputs
+010000000000
+011000000000
+011100000000
+011110000000
+011111111000
+inputs end 

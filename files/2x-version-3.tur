@@ -1,0 +1,46 @@
+# There are following tags:
+# 1) title, title end
+# --- This tag specifies machine's name.
+# 2) description, description end
+# --- This tag specifies machine's description.
+# 3) rules, rules end
+# --- This tag specifies machine's transition rules.
+# 4) inputs, inputs end
+# --- This tag specifies machine's predefined inputs.
+# !!! No comments are allowed between the tags.
+# !!! No empty lines are allowed between the tags.
+# There are three direction options:
+# + L --- moving left 
+# + C --- staying
+# + R --- moving right
+
+title
+    2x-version-3
+title end
+
+description
+    Given an integer x, calculate f(x)=2x. This version is from the textbook.
+description end
+
+# If no rule for a given pair (state, symbol), use indicator 'XXX' instead.
+# Please do not leave it empty. 
+rules
+         0       1
+1       XXX  	0R2
+2       0R3     1R2
+3       1R4     1R3
+4       1R5     XXX
+5       0L6     XXX
+6		0L7		1L6
+7 		0R8		1L7
+8		0R9		1C1
+9		XXX		0R10
+rules end
+
+inputs
+010000000000
+011000000000
+011100000000
+011110000000
+011111111000
+inputs end 

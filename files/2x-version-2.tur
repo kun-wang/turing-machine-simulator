@@ -15,7 +15,7 @@
 # + R --- moving right
 
 title
-    2x
+    2x-version-2
 title end
 
 description
@@ -27,12 +27,12 @@ description end
 rules
          0       1
 1       XXX  	0R2
-2       1L7     0R3
+2       1C8     0R3
 3       0R4     1R3
-4       1L5     1R4
-5       0L6     1L5
-6		1R2		1L6
-7		0R8		1L7
+4       1R5     1R4
+5       1L6     XXX
+6		0L7		1L6
+7		0R2		1L7
 rules end
 
 inputs

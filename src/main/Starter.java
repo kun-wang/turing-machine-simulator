@@ -10,11 +10,11 @@ import ui.MainGUI;
 
 public class Starter
 {
-    public static void main(String[] args)
+	public static void main(String[] args)
     {
         // use this one instead - com.apple.macos.useScreenMenuBar is deprecated
         System.setProperty("apple.laf.useScreenMenuBar", "true");
-        
+
         MainGUI program = new MainGUI("Turing Machine");
         program.run();
     }

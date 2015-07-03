@@ -15,26 +15,29 @@
 # + R --- moving right
 
 title
-    x adds y
+    x-div-2-version-2
 title end
 
 description
-    Given two integers x and y, calculate f(x,y)=x+y.
+    Given an integer x, calculate f(x)=x/2.
 description end
 
 # If no rule for a given pair (state, symbol), use indicator 'XXX' instead.
 # Please do not leave it empty. 
 rules
-         0       1      
-1       1R2     1R1     
-2       0L3     1R2     
-3       XXX     0L4     
-4       XXX     0L5     
-5       0R6     1L5     
+         0       1
+1       0L6  	0R2
+2       0L3     1R2
+3       1L6     0L4
+4       1R5     1L4
+5       0L6     1C1
+6		0R7		1L6
 rules end
 
 inputs
-0110111000
-011010000
-011101111110000
+010000000000
+011000000000
+011100000000
+011110000000
+011111111000
 inputs end 
